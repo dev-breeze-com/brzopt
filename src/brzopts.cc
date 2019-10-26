@@ -206,7 +206,6 @@ const std::string& Options::get(const std::string& key, const std::string& value
 void Options::printUsage(const brzopts::Option args[])
 //-----------------------------------------------------------------------------
 {
-	//int nargs = sizeof( args ) / sizeof( brzopts::Option );
 	if ( ! _copyright.empty() ) {
 		std::cout << _copyright << "\n\n";
 	}
@@ -252,12 +251,6 @@ int Options::checkKV(const char* name, const char* key, const char* value, bool 
 const brzopts::Option* Options::getOption(const brzopts::Option args[], const char* key, bool long_option)
 //-----------------------------------------------------------------------------
 {
-//int nargs = sizeof( args ) / sizeof( brzopts::Option );
-//fprintf( stdout, "nargs=%ld %ld\n", sizeof( args ), sizeof( brzopts::Option ));
-//fprintf( stdout, "nargs=%d arg='%s'\n", nargs, opt );
-//fprintf( stdout, "arg='%s'\n", opt );
-//fflush( stdout );
-
 	for (int i=0; args[i].name; i++) {
 
 		const brzopts::Option *option = &(args[i]);
